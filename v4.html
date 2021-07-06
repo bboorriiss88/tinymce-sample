@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/4.9.11-104/tinymce.min.js" referrerpolicy="origin"></script>
+
+  </head>
+
+  <body>
+      
+  </body>
+  <script>
+    const numberOfElements = 20;
+
+    for(let i = 0; i< numberOfElements; i++)
+    {
+        const id= "mytextarea" + i;
+        
+        let textArea=document.createElement("textarea");
+        textArea.id = id;
+        document.body.appendChild(textArea);
+
+        tinymce.init({
+            selector: "#"+ id
+         });
+    }
+    </script>
+  
+</html>
